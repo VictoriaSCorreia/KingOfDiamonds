@@ -1,4 +1,3 @@
-from módulos.tools import resultado, start
+from módulos.tools import start
 
 start()
-resultado()
