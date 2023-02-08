@@ -5,7 +5,7 @@
  There are five inputs and each one can accept only an int value from 0 to 100. The winner of the round will be determined by the result of multiplying the average of the values by 0.8. 
 
 
- The player who gets closer to this result will not have its points reduced (-1), while the others will. Each player will start with 0 points, will lose the one who reaches -10. The game will end when there is only one player left.
+ The player who gets closer to this result will not have its points reduced (-1), while the others will. Each player will start with 0 points, will lose the one who reaches -10. The game will end up when there is only one player left.
  
  
  A new rule is introduced for every player eliminated.
