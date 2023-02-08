@@ -13,7 +13,7 @@
  
  ### **4** players remaining:
 
-If 2 players or more choose the same number, the number becomes invalid, meaning they will lose a point even if the number is closest to 4/5ths the average.
+If 2 players or more chooses the same number, the number becomes invalid, meaning they will lose a point even if the number is closest to 4/5ths the average.
 
 
  ### **3** players remaining:

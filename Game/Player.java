@@ -6,17 +6,24 @@ public class Player{
     public Player(){
         this.score = 0;
     }
+    Scanner input = new Scanner(System.in);
     public void enterName(){
-        Scanner names = new Scanner(System.in);
-            System.out.print("Nome: ");
-            String userName = names.nextLine();
-            this.setName(userName);
+        System.out.print("- Nickname: ");
+        String userName = input.nextLine();
+        this.setName(userName);
     }
-    public void enterMove(){
-        Scanner moves = new Scanner(System.in);
-            System.out.print("Jogada: ");
-            int move = moves.nextInt();
-            this.setMove(move);
+    public void enterMove(){   // missing an exception of wrong value
+        System.out.println("---------------");
+        boolean invalidMove = true;
+        while (invalidMove){
+            System.out.print(this.getName().toUpperCase() + " move: ");
+            int move = input.nextInt();
+            if (move >= 0 && move <= 100){
+                this.setMove(move);
+                invalidMove = false; }
+            else{
+                System.out.println("! INVALID MOVE !");
+            }}      
     }
     public String getName(){
         return this.name;
