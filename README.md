@@ -5,7 +5,7 @@
  There are five inputs and each one can accept only an int value from 0 to 100. The winner of the round will be determined by the result of multiplying the average of the values by 0.8. 
 
 
- The player who gets closer to this result will not have its points reduced (-1), while the others will. Each player will start with 0 points, will lose the one who reaches the -5 reach. The game will end when there is only one person left.
+ The player who gets closer to this result will not have its points reduced (-1), while the others will. Each player will start with 0 points, will lose the one who reaches -5. The game will end when there is only one player left.
  
  
  A new rule is introduced for every player eliminated.
@@ -13,12 +13,12 @@
  
  ### **4** players remaining:
 
-If there are 2 people or more choose the same number, the number they choose becomes invalid, meaning they will lose a point even if the number is closest to 4/5ths the average.
+If 2 players or more choose the same number, the number becomes invalid, meaning they will lose a point even if the number is closest to 4/5ths the average.
 
 
  ### **3** players remaining:
  
- If there is a person who chooses the exact correct number, the loser penalty is doubled.
+ If there is a player who chooses the exact correct number, the loser penalty is doubled.
  
  
  ### **2** players remaining:
