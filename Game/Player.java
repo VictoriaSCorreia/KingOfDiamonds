@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Player{
     public String name;
@@ -12,18 +13,23 @@ public class Player{
         String userName = input.nextLine();
         this.setName(userName);
     }
-    public void enterMove(){   // missing an exception of wrong value
+    public void enterMove(){
         System.out.println("---------------");
         boolean invalidMove = true;
         while (invalidMove){
             System.out.print(this.getName().toUpperCase() + " move: ");
-            int move = input.nextInt();
-            if (move >= 0 && move <= 100){
-                this.setMove(move);
-                invalidMove = false; }
-            else{
-                System.out.println("! INVALID MOVE !");
-            }}      
+            try {
+                int move = input.nextInt();
+                if (move >= 0 && move <= 100) {
+                    this.setMove(move);
+                    invalidMove = false; }
+                else {
+                    System.out.println("! INVALID MOVE ! Please enter a number between 0 and 100.");
+                }}
+            catch (InputMismatchException valueError) {
+                System.out.println("! INVALID MOVE ! Please enter a valid integer.");
+                input.nextLine();
+            }}
     }
     public String getName(){
         return this.name;
