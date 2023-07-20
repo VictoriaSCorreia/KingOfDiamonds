@@ -5,34 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/players.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/7346c37fe2.js" crossorigin="anonymous"></script>
-    <script src="" defer></script>
+    <script src="/Site/JS/players.js" defer></script>
     <title>KingOfDiamonds | Login</title>
 </head>
 <body>
-    <form>
-        <div id="box1">
-            <div id="box">
-                <label for="">Jogador N° 1</label>
-                <input type="text" placeholder="Nickname" class="jog1">
-                <label for="">Jogador N° 2</label>
-                <input type="text" placeholder="Nickname" class="jog2">
-                <label for="">Jogador N° 3</label>
-                <input type="text" placeholder="Nickname" class="jog3"><br>
-                <br><label for="">Jogador N° 4</label>
-                <input type="text" placeholder="Nickname" class="jog4">
-                <label for="">Jogador N° 5</label>
-                <input type="text" placeholder="Nickname" class="jog5">
-            </div>  
+    <div id="container">
+        <div id="mainbox1">
+            <div id="boxicons">
+                <div onmouseover="hideElement()" onmouseout="showElement()" id="icons">
+                    <a href="http://127.0.0.1:5500/Site/home.html"></a>
+                        <i class="bi bi-door-closed-fill" id="icon"></i>
+                    </a>
+                    <a href="http://127.0.0.1:5500/Site/home.html">
+                        <i class="bi bi-door-open-fill" id="icon2" style="display: none;"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="divisa" onmouseover="changeContent()"></div>
         </div>
-        <a href=""><button id="button"><i class="fa-solid fa-diamond fa-flip"></i></button></a>
-    </form>
-    <div id="box2">
-        <h2>Alice in Borderland</h2>
-        <h3>今際の国のアリス</h3>
-        <p id="p1">げぇむおおばぁ</p>
-        <p id="p2">げぇむくりあ</p> 
+        <form>
+            <div id="mainbox2">
+                <div id="box">
+                    <span>
+                        <label for="">Jogador N° 1</label>
+                        <input type="text" placeholder="Nickname" id="jog1">
+                    </span>
+                    
+                    <span>
+                        <label for="">Jogador N° 2</label>
+                        <input type="text" placeholder="Nickname" id="jog2">
+                    </span>
+                    
+                    <span>
+                        <label for="">Jogador N° 3</label>
+                        <input type="text" placeholder="Nickname" id="jog3">
+                    </span>
+    
+                    <span>
+                        <label for="">Jogador N° 4</label>
+                        <input type="text" placeholder="Nickname" id="jog4">
+                    </span>
+    
+                    <span>
+                        <label for="">Jogador N° 5</label>
+                        <input type="text" placeholder="Nickname" id="jog5">
+                    </span>
+    
+                </div>  
+            </div>
+            
+            <a href="">
+                <button type="submit" id="button1" disabled="disabled"><i class="fa-solid fa-diamond fa-flip"></i></button>
+            </a>
+        </form>
+        <div id="box2">
+            <h2>Alice in Borderland</h2>
+            <h3>今際の国のアリス</h3>
+            <p id="p1">げぇむおおばぁ</p>
+            <p id="p2">げぇむくりあ</p> 
+        </div>
     </div>
-     
 </body>
 </html>
