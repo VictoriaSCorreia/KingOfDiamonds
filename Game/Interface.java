@@ -1,4 +1,4 @@
-public interface Interface{
-    public abstract void log();
-    public abstract void game();
+public interface Interface {
+    public abstract void enterName();
+    public abstract void enterMove();
 }

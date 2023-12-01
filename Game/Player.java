@@ -1,36 +1,42 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
-public class Player{
-    public String name;
-    public int move;
-    public int score;
-    public Player(){
-        this.score = 0;
-    }
+
+public class Player implements Interface{
+    private String name;
+    private int move;
+    private int score;
+
     Scanner input = new Scanner(System.in);
+
+    public Player(){
+        this.score = -1;
+    }
+    
     public void enterName(){
         System.out.print("- Nickname: ");
-        String userName = input.nextLine();
-        this.setName(userName);
+        setName(input.nextLine());
     }
+
     public void enterMove(){
-        System.out.println("---------------");
         boolean invalidMove = true;
+
+        System.out.println("---------------");
         while (invalidMove){
-            System.out.print(this.getName().toUpperCase() + " move: ");
-            try {
-                int move = input.nextInt();
-                if (move >= 0 && move <= 100) {
-                    this.setMove(move);
-                    invalidMove = false; }
-                else {
-                    System.out.println("! INVALID MOVE ! Please enter a number between 0 and 100.");
-                }}
-            catch (InputMismatchException valueError) {
-                System.out.println("! INVALID MOVE ! Please enter a valid integer.");
-                input.nextLine();
-            }}
-    }
+            System.out.print(getName().toUpperCase() + " move: ");
+            int value = input.nextInt();
+            invalidMove = invalid(value);
+            if (!invalidMove)
+                setMove(value);
+        }}
+
+    public boolean invalid(int move){
+            if (move >= 0 && move <= 100) {
+                return false; 
+            }
+            else {
+                System.out.println("! INVALID MOVE ! Please enter a number between 0 and 100.");
+                return true;
+            }};
+
     public String getName(){
         return this.name;
     }
