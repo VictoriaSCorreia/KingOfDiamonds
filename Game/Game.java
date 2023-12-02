@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
 public class Game {
-    private static String winner;
     private static Game game = null;
+    private static String winner;
     private static Round round = new Round();
     private static Rules rules = new Rules();
-
-    private ArrayList<Integer> moves = new ArrayList<>();
+    private static ArrayList<Integer> moves = new ArrayList<>();
 
     private Game(){
 
@@ -22,14 +21,22 @@ public class Game {
             Player player = new Player();
             player.enterName();
             round.playersList.add(player);
-        }}
+        }
+        for(Player player : round.playersList)
+            round.playersList2.add(player);}
 
     public void start(){     
         while (round.getRoundNum() > 1){
                 double result;
                 int winnerMove, winnersNumb;
 
+                round.playersList.clear();
                 moves.clear();
+
+                // so we can remove the players at runtime
+                for(Player player : round.playersList2)
+                    round.playersList.add(player);
+        
                 setMoves();
                 result = calcTotal();
                 winnerMove = winnerMove(result);
@@ -41,12 +48,13 @@ public class Game {
 
                 System.out.println("\n==== " + result + " ====");
                 System.out.println("Closer move: " + winnerMove);
-
-                diretory(winnerMove, result);
-                printPlayers();
+                
+                rules.removingPoints(round.playersList);
+                diretory();
                 removingPlayers();
+                printPlayers();
             }
-        for (Player player : round.playersList){
+        for (Player player : round.playersList2){
             winner = player.getName(); }
         System.out.println("\n*  Winner: " + winner.toUpperCase() + "  *");
     }
@@ -99,17 +107,17 @@ public class Game {
 
         for(Player player : round.playersList){
             if (player.getScore() <= -10){
-                round.playersList.remove((Object) player);
+                round.playersList2.remove((Object) player);
                 round.setRoundNum(round.getRoundNum() - 1);
+                rules.setRound(rules.getRound() - 1);
                 losers = true;
             }}
-
         if (losers && round.getRoundNum() > 1)
             rules.rules(); 
     }
 
-    public void diretory(int winnerMove, double result){
-
+    public void diretory(){
+        
         switch (round.getRoundNum()) {
             case 5:
                 rules.fivePlayers(round.playersList);

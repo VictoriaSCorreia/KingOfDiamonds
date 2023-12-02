@@ -4,6 +4,7 @@ public class Round {
     private int roundNum;
     private int nPlayers; 
     protected ArrayList<Player> playersList = new ArrayList<Player>(); 
+    protected ArrayList<Player> playersList2 = new ArrayList<Player>(); 
    
     public Round(){
         this.roundNum = 5;

@@ -8,7 +8,7 @@ public class Player implements Interface{
     Scanner input = new Scanner(System.in);
 
     public Player(){
-        this.score = -1;
+        this.score = 0;
     }
     
     public void enterName(){

@@ -4,8 +4,7 @@ public class Rules {
     private int winnerMove;
     private double result;
     private int winnersNumb;
-
-    private static Round round = new Round();
+    private int roundNumb = 5;
 
     // No rules
     public void fivePlayers(ArrayList<Player> playersList){ 
@@ -52,7 +51,6 @@ public class Rules {
                 }}}
         else
             threePlayers(playersList);   
-        
     }
 
     private void addPoints(ArrayList<Player> playersList){
@@ -62,17 +60,19 @@ public class Rules {
             }}
     }
 
-    public void rules(){
-        if (round.getRoundNum() <= 4){
+    public void removingPoints(ArrayList<Player> playersList){
+        for (Player player : playersList)
+            player.setScore(player.getScore() - 1);
+    }
 
+    public void rules(){
+        if (roundNumb <= 4){
             System.out.println("\n - (If 2 players or more choose the same number, they'll lose a point even if the number is the closest)"); 
         }
-        if (round.getRoundNum() <= 3){
-
+        if (roundNumb <= 3){
             System.out.println(" - (If a player chooses the exact correct number, the loser penalty is doubled)");
         }
-        if (round.getRoundNum() <= 2){
-
+        if (roundNumb <= 2){
             System.out.println(" - (If someone chooses 0, the player who chooses 100 is the winner)");
         }
     }
@@ -88,5 +88,12 @@ public class Rules {
     public void setWinnersNumb(int numb){
         this.winnersNumb = numb;
     }
-}
 
+    public void setRound(int roundNumb){
+        this.roundNumb = roundNumb;
+    }
+
+    public int getRound(){
+        return roundNumb;
+    }
+}
