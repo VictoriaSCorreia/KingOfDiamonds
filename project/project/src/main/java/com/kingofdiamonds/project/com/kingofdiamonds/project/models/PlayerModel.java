@@ -1,19 +1,12 @@
 package com.kingofdiamonds.project.com.kingofdiamonds.project.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
-@Table(name = PlayerModel.TABLE_NAME)
-public class PlayerModel {
-
-    public static final String TABLE_NAME = "player";
-
+@Table(name = "player")
+public class PlayerModel implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
@@ -28,7 +21,7 @@ public class PlayerModel {
     @Column(name = "score", length = 2)
     private Integer score;
 
-    public PlayerModel() {
+    /* public PlayerModel() {
     }
 
     public PlayerModel(UUID id, String playername, Integer move, Integer score) {
@@ -36,7 +29,8 @@ public class PlayerModel {
         this.playername = playername;
         this.move = move;
         this.score = score;
-    }
+    } */
+
 
     public UUID getId() {
         return this.id;
@@ -69,5 +63,5 @@ public class PlayerModel {
     public void setScore(Integer score) {
         this.score = score;
     }
-    
+
 }
