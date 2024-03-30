@@ -9,5 +9,4 @@ class KingOfDiamondsProjectApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

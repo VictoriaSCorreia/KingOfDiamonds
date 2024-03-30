@@ -2,7 +2,6 @@ package com.kingofdiamonds.project.com.kingofdiamonds.project.controllers;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -50,7 +50,7 @@ public class PlayerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Object> getOnePlayer(@PathVariable(value = "id") UUID id){
+    public ResponseEntity<Object> getOnePlayer(@PathVariable(value = "id") Long id){
         Optional<PlayerModel> playerModelOptional = playerService.findById(id);
         if (!playerModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
@@ -59,12 +59,25 @@ public class PlayerController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deletePlayer(@PathVariable(value = "id") UUID id){
+    public ResponseEntity<Object> deletePlayer(@PathVariable(value = "id") Long id){
         Optional<PlayerModel> playerModelOptional = playerService.findById(id);
         if (!playerModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
         }
         playerService.delete(playerModelOptional.get());
         return ResponseEntity.status(HttpStatus.OK).body("Player deleted successfully.");
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Object> updatePlayer(@PathVariable(value = "id") Long id,
+                                                    @RequestBody @Valid PlayerDto playerDto){
+        Optional<PlayerModel> playerModelOptional = playerService.findById(id);
+        if (!playerModelOptional.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
+        }
+        var playerModel = new PlayerModel();
+        BeanUtils.copyProperties(playerDto, playerModel);
+        playerModel.setId(playerModelOptional.get().getId());
+        return ResponseEntity.status(HttpStatus.OK).body(playerService.save(playerModel));
     }
 }

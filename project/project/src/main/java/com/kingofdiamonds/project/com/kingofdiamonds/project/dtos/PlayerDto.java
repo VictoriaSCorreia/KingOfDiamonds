@@ -1,5 +1,7 @@
 package com.kingofdiamonds.project.com.kingofdiamonds.project.dtos;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -9,10 +11,9 @@ public class PlayerDto {
     @Size(min = 2, max = 50)
     private String playername;
 
-    @NotBlank
-    @Size(min = 1, max = 3)
+    @Min(value = 0)
+    @Max(value = 100)
     private Integer move;
-
 
     public String getPlayername() {
         return this.playername;

@@ -7,7 +7,6 @@ import jakarta.transaction.Transactional;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
@@ -25,7 +24,6 @@ public class PlayerService {
         return playerRepository.save(playerModel);
     }
 
-    
     public boolean existsByPlayername(String playername) {
         return playerRepository.existsByPlayername(playername);
     }
@@ -34,7 +32,7 @@ public class PlayerService {
         return playerRepository.findAll();
     }
 
-    public Optional<PlayerModel> findById(UUID id) {
+    public Optional<PlayerModel> findById(Long id) {
         return playerRepository.findById(id);
     }
 
