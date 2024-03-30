@@ -1,4 +1,4 @@
-package com.kingofdiamonds.project.com.kingofdiamonds.project.dtos;
+package com.kingofdiamonds.dtos;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;

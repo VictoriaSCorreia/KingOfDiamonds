@@ -8,8 +8,8 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.kingofdiamonds</groupId>
-	<artifactId>project</artifactId>
+	<groupId>com</groupId>
+	<artifactId>kingofdiamonds</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>King of Diamonds Project</name>
 	<description>Game based on Alice in Borderland</description>

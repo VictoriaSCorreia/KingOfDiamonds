@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CheckStyle-IDEA" serialisationVersion="2">
+    <checkstyleVersion>10.2</checkstyleVersion>
+    <scanScope>JavaOnlyWithTests</scanScope>
+    <option name="thirdPartyClasspath" />
+    <option name="activeLocationIds">
+      <option value="1fa4ea82-65df-4bed-81be-7ed70eb9e9e8" />
+    </option>
+    <option name="locations">
+      <list>
+        <ConfigurationLocation id="1c6b8991-1d28-465d-8f65-b45b69d6ffd0" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="1fa4ea82-65df-4bed-81be-7ed70eb9e9e8" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
+      </list>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="GoogleJavaFormatSettings">
+    <option name="style" value="AOSP" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/project/project/pom.xml" />
+        <option value="$PROJECT_DIR$/project/pom.xml" />
+      </list>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SaveActionSettings">
+    <option name="actions">
+      <set>
+        <option value="activate" />
+        <option value="organizeImports" />
+        <option value="reformat" />
+        <option value="fieldCanBeFinal" />
+        <option value="localCanBeFinal" />
+        <option value="localCanBeFinalExceptImplicit" />
+        <option value="methodMayBeStatic" />
+        <option value="unqualifiedFieldAccess" />
+        <option value="unqualifiedMethodAccess" />
+        <option value="missingOverrideAnnotation" />
+        <option value="useBlocks" />
+        <option value="generateSerialVersionUID" />
+        <option value="unnecessaryThis" />
+        <option value="finalPrivateMethod" />
+        <option value="unnecessaryFinalOnLocalVariableOrParameter" />
+        <option value="explicitTypeCanBeDiamond" />
+        <option value="suppressAnnotation" />
+        <option value="unnecessarySemicolon" />
+        <option value="singleStatementInBlock" />
+        <option value="accessCanBeTightened" />
+      </set>
+    </option>
+    <option name="configurationPath" value="" />
+  </component>
+</project>

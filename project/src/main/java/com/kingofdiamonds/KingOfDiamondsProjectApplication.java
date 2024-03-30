@@ -1,4 +1,4 @@
-package com.kingofdiamonds.project;
+package com.kingofdiamonds;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

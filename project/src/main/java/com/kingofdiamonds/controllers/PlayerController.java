@@ -1,4 +1,4 @@
-package com.kingofdiamonds.project.com.kingofdiamonds.project.controllers;
+package com.kingofdiamonds.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kingofdiamonds.project.com.kingofdiamonds.project.dtos.PlayerDto;
-import com.kingofdiamonds.project.com.kingofdiamonds.project.models.PlayerModel;
-import com.kingofdiamonds.project.com.kingofdiamonds.project.services.PlayerService;
+import com.kingofdiamonds.dtos.PlayerDto;
+import com.kingofdiamonds.models.PlayerModel;
+import com.kingofdiamonds.services.PlayerService;
 
 import jakarta.validation.Valid;
 

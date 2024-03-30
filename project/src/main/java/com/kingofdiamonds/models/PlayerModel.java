@@ -1,4 +1,4 @@
-package com.kingofdiamonds.project.com.kingofdiamonds.project.models;
+package com.kingofdiamonds.models;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

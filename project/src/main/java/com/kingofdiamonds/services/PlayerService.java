@@ -1,7 +1,7 @@
-package com.kingofdiamonds.project.com.kingofdiamonds.project.services;
+package com.kingofdiamonds.services;
 
-import com.kingofdiamonds.project.com.kingofdiamonds.project.models.PlayerModel;
-import com.kingofdiamonds.project.com.kingofdiamonds.project.repositories.PlayerRepository;
+import com.kingofdiamonds.models.PlayerModel;
+import com.kingofdiamonds.repositories.PlayerRepository;
 
 import jakarta.transaction.Transactional;
 
