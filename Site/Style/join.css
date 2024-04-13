@@ -86,7 +86,7 @@ label{
     border-style:double;
 }
 #button1:hover, #button:focus{
-    background-color: rgb(126, 99, 99);
+    background-color: rgb(135, 72, 72);
     border: solid rgb(24, 24, 24);
     border-width: 5px;
     cursor: pointer;
