@@ -77,7 +77,7 @@ label{
 #button1{
     background-color: rgb(248, 253, 252);
     padding: 20px;
-    border: solid rgb(73, 73, 73);
+    border: solid rgb(100, 100, 100);
     border-width: 5px;
     border-radius: 2px;
     color: rgb(211, 0, 0);  
@@ -113,58 +113,20 @@ input{
     background-color: #141414;
     border: solid rgb(41, 41, 41);
     border-width: 3px;
-    padding-left: 5px;
-    height: 19px;
+    padding-left: 15px;
+    height: 31px;
     border-radius: 2px;
 }
 input:hover, input:focus{
     border: solid rgb(121, 85, 85);
 }
 
-@media screen and (max-width: 1040px) {
-    #box{
-        width: 100vw;
-    }
-}
+
 
 @media screen and (max-width: 910px) {
-    #mainbox1{
-        width: 100%;
-        align-items: center;    
-    }
-    form{
-        row-gap: 286px;
-    }
-    #box{   
-        background-color: #141414;
-        border: none;
-        width: 100px;
-    }
-    #box2{
-        margin-top: 50px;
-    }
-    #container{
-        margin-top: 50px;
-        margin-bottom: 50px;
-        align-items: center;
-    }
-    #mainbox2{
-        width: 40px;
-    }
-    label{
-        color: white;
-    }
-    input{
-        margin-top: 5px;
-        margin-bottom: 12px;
-        width: 170px;
-        background-color: #ffffff;
-        color: black;   
-    }
-    #divisa{
-        width: 70%;
-    }
-
    
+    #container{
+        padding-left: 70px; 
+    }
 
 }

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&family=B612+Mono&family=Inconsolata&family=Marcellus&family=Martian+Mono:wght@600&family=PT+Mono&family=Philosopher:wght@700&family=Roboto+Mono&family=Ropa+Sans&family=Ubuntu+Condensed&display=swap');
+* {
+    margin: 0; padding: 0;               
+}
+
+body{
+    height: 100%;
+    text-align: center;
+    background-color: #141414;
+    color: rgb(39, 39, 39);
+    font-size: 18px;
+    font-family: 'Azeret Mono', monospace;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    row-gap: 26px;
+    min-height: 100vh;
+}
+#mainbox1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+}
+#mainbox2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    column-gap: 80px;
+    background-color: rgb(248, 253, 252);
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    row-gap: 126px;
+}
+#box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    align-items: center;
+    justify-content: center;
+    border: solid rgb(248, 253, 252);
+    border-width: 10px;
+    height: 100px;
+    background-color: rgb(248, 253, 252);
+}
+#boxicons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icons{
+    width: 30px;
+    font-size: 35px;
+    color: rgb(248, 253, 252);  
+}
+#icon2{
+    color: rgb(248, 253, 252);  
+    text-shadow: 1px 1px 3px rgb(179, 0, 0);
+}
+#divisa{
+    background-color: rgb(255, 0, 0);
+    height: 2px;
+    box-shadow: 0px 0px 5px 2px rgb(139, 0, 0);
+}
+label{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 21px;
+}
+#button1{
+    background-color: rgb(248, 253, 252);
+    padding: 20px;
+    border: solid rgb(100, 100, 100);
+    border-width: 5px;
+    border-radius: 2px;
+    color: rgb(211, 0, 0);  
+    border-style:double;
+}
+#button1:hover, #button:focus{
+    background-color: rgb(126, 99, 99);
+    border: solid rgb(24, 24, 24);
+    border-width: 5px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    border-style:double;
+}
+i{
+    --fa-animation-duration: 3s;
+}
+#box2{
+    color: rgb(248, 253, 252);
+    font-size: 18px;
+}
+p{
+    color: rgb(116, 0, 0);
+}
+#p1{
+    padding-top: 2%;  
+}
+#p2{
+    padding-right: 7%;
+}
+input{
+    outline: none;
+    color: rgb(221, 221, 221);
+    background-color: #141414;
+    border: solid rgb(41, 41, 41);
+    border-width: 3px;
+    padding-left: 15px;
+    height: 31px;
+    border-radius: 2px;
+}
+input:hover, input:focus{
+    border: solid rgb(121, 85, 85);
+}
+
+@media screen and (max-width: 700px) {
+    #container{
+        padding-left: 70px;
+    }
+    #mainbox2{
+        column-gap: 0px; 
+    }
+    input{
+        padding-left: 6px;
+    }
+    .box1{
+        margin-left: 3%;
+    }
+}
+
+

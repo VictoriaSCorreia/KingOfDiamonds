@@ -8,16 +8,13 @@ body{
     font-family: 'Azeret Mono', monospace;
     text-align: center; 
 }
-#mainBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 #box{
     display: flex;
     flex-direction:row;
     column-gap: 66px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 button{
     background-color: #1c0909;
@@ -42,4 +39,11 @@ button:hover{
     cursor: pointer;
     transition-duration: 0.2s;
     box-shadow: 0px 0px 2px 1px rgb(56, 0, 0); 
+}
+@media screen and (max-width: 560px){
+    #box{
+        flex-direction:column;
+        row-gap: 60px;
+        padding-left: 14%;
+    }
 }
