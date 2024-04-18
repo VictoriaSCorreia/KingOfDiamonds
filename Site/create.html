@@ -11,8 +11,7 @@
     <script src="/Site/JS/door.js" defer></script>
     <title>KingOfDiamonds | Login</title>
 </head>
-<body>
-    
+<body> 
     <div id="container">
         <div id="mainbox1">
             <div id="boxicons">
@@ -32,7 +31,6 @@
                         <input type="text" id="jog1">
                 </div>  
             </div>
-            
             <a href="">
                 <button type="submit" id="button1" disabled="disabled"><i class="fa-solid fa-diamond fa-flip"></i></button>
             </a>
@@ -45,7 +43,6 @@
         </div>
     </div>
     <script>
-        
         let ws = new WebSocket("ws://localhost:8080")
         ws.onmessage = message => {
             //message data
