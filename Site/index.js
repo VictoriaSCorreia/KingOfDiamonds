@@ -1,13 +1,15 @@
 const http = require("http");
 const app = require("express")();
-app.get("/", (req,res) => res.sendFile(__dirname + "/index.html")) // ****
-app.listen(8081, () => console.log("Listening on http port 8081"))
+
+app.get("/", (req,res)=> res.sendFile(__dirname + "/create.html"))
+
+app.listen(8081, ()=>console.log("Listening on http port 8081"))
 const websocketServer = require("websocket").server
 const httpServer = http.createServer();
-httpServer.listen(8080, () => console.log("Listening"))
-// hashmap clients
+httpServer.listen(8080, () => console.log("Listening.. on 8080"))
+//hashmap clients
 const clients = {};
-
+const games = {};
 
 const wsServer = new websocketServer({
     "httpServer": httpServer
@@ -15,8 +17,8 @@ const wsServer = new websocketServer({
 wsServer.on("request", request => {
     //connect
     const connection = request.accept(null, request.origin);
-    connection.on("open", () => console.log("Opened"))
-    connection.on("close", () => console.log("Closed"))
+    connection.on("open", () => console.log("opened!"))
+    connection.on("close", () => console.log("closed!"))
     connection.on("message", message => {
         const result = JSON.parse(message.utf8Data)
         console.log(result)

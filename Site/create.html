@@ -12,6 +12,7 @@
     <title>KingOfDiamonds | Login</title>
 </head>
 <body>
+    
     <div id="container">
         <div id="mainbox1">
             <div id="boxicons">
@@ -43,5 +44,13 @@
             <p id="p2">げぇむくりあ</p> 
         </div>
     </div>
+    <script>
+        let ws = new WebSocket("ws://localhost:8080")
+        ws.onmessage = message => {
+            //message data
+            const response = JSON.parse(message.data);
+            console.log(response);
+        }
+    </script>
 </body>
 </html>
