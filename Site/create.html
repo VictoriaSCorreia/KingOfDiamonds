@@ -42,16 +42,5 @@
             <p id="p2">げぇむくりあ</p> 
         </div>
     </div>
-    <script>
-        let ws = new WebSocket("ws://localhost:8080")
-        ws.onmessage = message => {
-            //message data
-            const response = JSON.parse(message.data);
-            if (response.method === "connect"){
-                clientId = response.clientId;
-                console.log("Client id Set successfully " + clientId)
-            }
-        }
-    </script>
 </body>
 </html>

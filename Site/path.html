@@ -11,8 +11,19 @@
 </head>
 <body>
     <div id="box">
-        <a href="http://127.0.0.1:5500/Site/create.html"><button>CREATE GAME</button></a>
-        <a href="http://127.0.0.1:5500/Site/join.html"><button class="button2">JOIN GAME</button></a>  
+        <a href="http://127.0.0.1:5500/Site/create.html"><button id="btnCreate">NEW GAME</button></a>
+        <a href="http://127.0.0.1:5500/Site/join.html"><button>JOIN</button></a>  
     </div>
+    <script>
+        let ws = new WebSocket("ws://localhost:8080")
+        ws.onmessage = message => {
+            //message data
+            const response = JSON.parse(message.data);
+            if (response.method === "connect"){
+                clientId = response.clientId;
+                console.log("Client id Set successfully " + clientId)
+            }
+        }
+    </script>
 </body>
 </html>

@@ -28,10 +28,7 @@ button{
     letter-spacing: 1px;
     box-shadow: 0px 0px 2px 1px #fe0000; 
 }
-.button2{
-    padding-left: 32px;
-    padding-right: 32px;
-}
+
 button:hover{
     background-color: #f10606;
     border: solid #5d0000;
