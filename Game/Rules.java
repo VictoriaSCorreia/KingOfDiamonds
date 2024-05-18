@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+/* Completely done */
 public class Rules {
     private int winnerMove;
     private double result;

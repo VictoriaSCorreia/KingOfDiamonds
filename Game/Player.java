@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+/* Completely done */
 public class Player implements Interface{
     private String name;
     private int move;

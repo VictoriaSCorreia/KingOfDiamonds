@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+/* Completely done */
 public class Game {
     private static Game game = null;
     private static String winner;
