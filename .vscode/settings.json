@@ -1,8 +1,0 @@
-{
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "java.project.sourcePaths": [
-        "Game",
-        "project\\src\\main\\java",
-        "kod\\src\\main\\test\\java\\com"
-    ]
-}
