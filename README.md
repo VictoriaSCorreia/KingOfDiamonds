@@ -20,12 +20,10 @@
 
 If 2 players or more choose the `same number`, the number becomes `invalid`, resulting in a point deduction even if their moves are closer to the result.
 
-
  ### **3** players remaining:
  
 If a player chooses the `exact correct number`, the losers penalty is `doubled (-2)`.
- 
- 
+
  ### **2** players remaining:
  
 If someone chooses `0`, the player who chooses `100` is the winner.
