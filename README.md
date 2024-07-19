@@ -2,7 +2,7 @@
  A mathematical game inspired by Alice in Borderland.
  
  ## How to play
- There are five inputs, each one accepting only an integer value from 0 to 100. The winner of the round is determined by the result of: 
+ There are five inputs with each one accepting only an integer value from 0 to 100. The winner of the round is determined by the result of: 
  
  `
  Multiplying the average by 0.8
