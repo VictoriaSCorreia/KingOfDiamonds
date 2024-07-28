@@ -2,7 +2,6 @@
 * {
     margin: 0; padding: 0;               
 }
-
 body{
     height: 100%;
     text-align: center;
@@ -120,8 +119,6 @@ input{
 input:hover, input:focus{
     border: solid rgb(121, 85, 85);
 }
-
-
 
 @media screen and (max-width: 910px) {
    
