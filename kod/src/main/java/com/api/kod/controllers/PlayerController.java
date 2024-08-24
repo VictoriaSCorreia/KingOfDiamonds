@@ -34,6 +34,7 @@ public class PlayerController {
 
     @PostMapping
     public ResponseEntity<Object> savePlayer(@RequestBody @Valid PlayerDto playerDto){
+        
         if(playerService.existsByPlayerName(playerDto.getPlayerName())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Player name is already in use!");
         }
@@ -51,9 +52,11 @@ public class PlayerController {
     @GetMapping("/{id}")
     public ResponseEntity<Object> getOnePlayer(@PathVariable(value = "id") Long id){
         Optional<PlayerModel> playerModelOptional = playerService.findById(id);
+        
         if (!playerModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
         }
+        
         return ResponseEntity.status(HttpStatus.OK).body(playerModelOptional.get());
     }
 
