@@ -60,10 +60,12 @@ public class PlayerController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deletePlayer(@PathVariable(value = "id") Long id){
         Optional<PlayerModel> playerModelOptional = playerService.findById(id);
+        
         if (!playerModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
         }
         playerService.delete(playerModelOptional.get());
+        
         return ResponseEntity.status(HttpStatus.OK).body("Player deleted successfully.");
     }
 
@@ -71,12 +73,14 @@ public class PlayerController {
     public ResponseEntity<Object> updatePlayer(@PathVariable(value = "id") Long id,
                                                     @RequestBody @Valid PlayerDto playerDto){
         Optional<PlayerModel> playerModelOptional = playerService.findById(id);
+        
         if (!playerModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Player not found.");
         }
         var playerModel = new PlayerModel();
         BeanUtils.copyProperties(playerDto, playerModel);
         playerModel.setId(playerModelOptional.get().getId());
+        
         return ResponseEntity.status(HttpStatus.OK).body(playerService.save(playerModel));
     }
 }
