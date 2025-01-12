@@ -1,3 +1,5 @@
+© **VictoriaSCorreia**
+
 # KingOfDiamonds
  A mathematical game inspired by Alice in Borderland.
  
@@ -27,3 +29,4 @@ If a player chooses the `exact correct number`, the losers penalty is `doubled (
  ### **2** players remaining:
  
 If someone chooses `0`, the player who chooses `100` is the winner.
+
