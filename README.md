@@ -33,11 +33,10 @@ If someone chooses `0`, the player who chooses `100` is the winner.
 ## DESIGN ##
 
  ### Home Page
-<p align='center'><img src="/README/images/homepage.png" /></p>
-<p align='center'><img src="/README/images/homepage2.png" /></p>
+<p align='center'><img src="/README Images/homepage.png" /></p>
 
  ### Explore Page
-<p align='center'><img src="/README/images/m.png" /></p>
-<p align='center'><img src="/README/images/newgame.png" /></p>
-<p align='center'><img src="/README/images/join.png" /></p>
+<p align='center'><img src="/README Images/m.png" /></p>
+<p align='center'><img src="/README Images/newgame.png" /></p>
+<p align='center'><img src="/README Images/join.png" /></p>
 
