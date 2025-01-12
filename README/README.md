@@ -30,3 +30,14 @@ If a player chooses the `exact correct number`, the losers penalty is `doubled (
  
 If someone chooses `0`, the player who chooses `100` is the winner.
 
+## DESIGN ##
+
+ ### Home Page
+<p align='center'><img src="/README/images/homepage.png" /></p>
+<p align='center'><img src="/README/images/homepage2.png" /></p>
+
+ ### Explore Page
+<p align='center'><img src="/README/images/m.png" /></p>
+<p align='center'><img src="/README/images/newgame.png" /></p>
+<p align='center'><img src="/README/images/join.png" /></p>
+
