@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Rules {
     private int winnerMove;
     private double result;
-    private int winnersNumb;
+    private int numberOfWinners;
     private int roundNumb = 5;
 
     // No rules
@@ -14,7 +14,7 @@ public class Rules {
 
     // Rule N° 1
     public void fourPlayers(ArrayList<Player> playersList){
-        if (winnersNumb == 1){
+        if (numberOfWinners == 1){
             addPoints(playersList);}
     }
 
@@ -86,8 +86,8 @@ public class Rules {
         this.result = result;
     }
 
-    public void setWinnersNumb(int numb){
-        this.winnersNumb = numb;
+    public void setnumberOfWinners(int numb){
+        this.numberOfWinners = numb;
     }
 
     public void setRound(int roundNumb){
