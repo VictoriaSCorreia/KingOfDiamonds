@@ -11,13 +11,11 @@ public class Rules {
     public void fivePlayers(ArrayList<Player> playersList){ 
         addPoints(playersList);
     }
-
     // Rule N° 1
     public void fourPlayers(ArrayList<Player> playersList){
         if (numberOfWinners == 1){
             addPoints(playersList);}
     }
-
     // Rule N° 1 and N° 2
     public void threePlayers(ArrayList<Player> playersList){
         boolean ruleN2 = false;
@@ -33,7 +31,6 @@ public class Rules {
                     player.setScore(player.getScore() - 1);
                 }}
     }
-
     // Rule N° 1, N° 2 and N°3
     public void twoPlayers(ArrayList<Player> playersList){
         boolean ruleN3 = false;
@@ -53,19 +50,16 @@ public class Rules {
         else
             threePlayers(playersList);   
     }
-
     private void addPoints(ArrayList<Player> playersList){
         for (Player player : playersList){
             if (player.getMove() == winnerMove){
                 player.setScore(player.getScore() + 1);
             }}
     }
-
     public void removingPoints(ArrayList<Player> playersList){
         for (Player player : playersList)
             player.setScore(player.getScore() - 1);
     }
-
     public void rules(){
         if (roundNumb <= 4){
             System.out.println("\n - (If 2 players or more choose the same number, they'll lose a point even if the number is the closest)"); 
@@ -81,19 +75,15 @@ public class Rules {
     public void setWinnerMove(int move){
         this.winnerMove = move;
     }
-
     public void setResult(double result){
         this.result = result;
     }
-
     public void setnumberOfWinners(int numb){
         this.numberOfWinners = numb;
     }
-
     public void setRound(int roundNumb){
         this.roundNumb = roundNumb;
     }
-
     public int getRound(){
         return roundNumb;
     }

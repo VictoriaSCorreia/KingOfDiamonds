@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-/* Completely done */
+/* Completely done, just needs error handling*/
 public class Game {
     private static Game game = null;
     private static String winner;
@@ -99,7 +99,6 @@ public class Game {
             }}
         return winners;
     }
-
     private void removingPlayers(){
         boolean losers = false;
 
@@ -113,7 +112,6 @@ public class Game {
         if (losers && round.getRoundNum() > 1)
             rules.rules(); 
     }
-
     public void diretory(){
         
         switch (round.getRoundNum()) {
@@ -135,7 +133,6 @@ public class Game {
                 break;
         }
     }
-
     public void printPlayers(){
         System.out.println("");
         for(Player player : round.playersList){
@@ -144,4 +141,3 @@ public class Game {
         System.out.println(" ||");
     }
 }
-

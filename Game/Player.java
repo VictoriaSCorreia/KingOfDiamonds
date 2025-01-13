@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-/* Completely done */
+/* Completely done, just needs error handling*/
 public class Player implements Interface{
     private String name;
     private int move;
@@ -11,12 +11,10 @@ public class Player implements Interface{
     public Player(){
         this.score = 0;
     }
-    
     public void enterName(){
         System.out.print("- Nickname: ");
         setName(input.nextLine());
     }
-
     public void enterMove(){
         boolean invalidMove = true;
 
@@ -28,7 +26,6 @@ public class Player implements Interface{
             if (!invalidMove)
                 setMove(value);
         }}
-
     public boolean invalid(int move){
             if (move >= 0 && move <= 100) {
                 return false; 
@@ -37,7 +34,7 @@ public class Player implements Interface{
                 System.out.println("! INVALID MOVE ! Please enter a number between 0 and 100.");
                 return true;
             }};
-
+            
     public String getName(){
         return this.name;
     }
